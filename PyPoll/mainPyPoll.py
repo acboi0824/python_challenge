@@ -57,7 +57,7 @@ with open('analysis/PyPoll Analysis.txt',"w") as txt_file:
     # loop through and find the total votes by candidates
     for x in unique_candidates:
         # winning_votes.append()
-        election_results = (f"{x} {cand_and_votes.get(x)['percent_votes']} ({cand_and_votes.get(x)['votes']}) \n")
+        election_results = (f"{x} {cand_and_votes.get(x)['percent_votes']}% ({cand_and_votes.get(x)['votes']}) \n")
 
         # append votes into list
         votes = cand_and_votes.get(x)['votes']
