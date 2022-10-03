@@ -53,11 +53,14 @@ with open('analysis/PyPoll Analysis.txt',"w") as txt_file:
     header = (F"Election Results\n ------------\nTotal Votes: {total_votes}\n------------\n")   
     # write the header into text file
     txt_file.write(header)
+    print(header)
 
     # loop through and find the total votes by candidates
     for x in unique_candidates:
+
         # winning_votes.append()
         election_results = (f"{x} {cand_and_votes.get(x)['percent_votes']}% ({cand_and_votes.get(x)['votes']}) \n")
+        print(election_results)
 
         # append votes into list
         votes = cand_and_votes.get(x)['votes']
@@ -78,4 +81,5 @@ with open('analysis/PyPoll Analysis.txt',"w") as txt_file:
 
     #write the winner into text
     txt_file.write(winner_text)
+    print(winner_text)
 
